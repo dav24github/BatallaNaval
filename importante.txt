@@ -1,0 +1,2 @@
+ejercutar batallaNavalpc1 -> servidor
+ejercutar dos veces batallaNavalpc2 -> jugadores
