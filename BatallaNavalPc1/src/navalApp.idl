@@ -1,0 +1,33 @@
+module navalApp{
+    interface naval{
+        typedef boolean MatrixArrayBool[11][11];
+        typedef long MatrixArray[11][11];
+        typedef boolean Vector[2];
+        long getId();
+        void ListoParaJugar(in long id);
+        boolean getListoParaJugarRival(in long id);
+        boolean pedirTurno(in long id);
+        void pasarTurno(in long id);
+
+        void setMiMatrix(in MatrixArray array, in long id);
+        MatrixArray getMiMatrix(in long id);
+        void setMiMatrixBool(in MatrixArrayBool array, in long id);
+        MatrixArrayBool getMiMatrixBool(in long id);
+
+        void setSuMatrix(in MatrixArray array, in long id);
+        MatrixArray getSuMatrix(in long id);
+        void setSuMatrixBool(in MatrixArrayBool array, in long id);
+        MatrixArrayBool getSuMatrixBool(in long id);
+
+        void heGanado(in long id);
+        Vector ganadorPerdedor(in long id);
+        void reiniciarPartida(in long id);
+
+        boolean validarCelda(in long f, in long c);
+        boolean validarPosicionBarco(in MatrixArray array, in long tam, in long f, in long c, in long hor);
+        void colocarBarco(in MatrixArray array, in long tam);
+        boolean victoria(in MatrixArray array1, in MatrixArrayBool array2);
+        boolean disparo(in MatrixArray array1, in long valor, in MatrixArrayBool array2);  
+        oneway void shutdown();
+    };
+};
